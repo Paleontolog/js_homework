@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html, main {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body {
+    background: linear-gradient(-120deg, #003087, #009cde, #012169);
+}
+
+
+button, image, aside, .frame, .select_page_button {
+    padding: 10px;
+    background-color: #fc0; /* Цвет фона */
+    outline: 2px solid #000; /* Чёрная рамка */
+    border-radius: 10px; /* Радиус скругления */
+}
+
+.grid_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    height: 95vh;
+    margin: 25px;
+}
+
+#sidebar_article_form {
+    min-height: 0;
+    min-width: 0;
+}
+
+@media (max-width: 45em) {
+    .grid_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 96%) auto;
+    }
+    #sidebar_article_form {
+        display: none;
+    }
+
+    .highlighted > .article_block {
+        display: flex !important;
+    }
+
+    .article {
+        height: 60vh;
+    }
+}
+
+.highlighted > .select_page_button {
+    background-color: burlywood;
+}
+
+/*///////////////////Input article css////////////////////*/
+.myForm {
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-template-rows: 2em 2em auto 3em;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    padding: 1.2em;
+
+}
+
+.myForm > label {
+    grid-column: labels;
+    grid-row: auto;
+}
+
+.myForm > input, .myForm > textarea {
+    grid-column: controls;
+    grid-row: auto;
+}
+
+.myForm > button {
+    grid-column: 2;
+}
+
+textarea {
+    resize: none;
+}
+
+/*//////////////////Input article css//////////////////////*/
+
+
+/*//////////////////Article block css//////////////////////*/
+
+.article_block {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-items: end;
+    height: 100%;
+}
+
+.article_block > button {
+    margin: 10px;
+}
+
+.article {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    overflow-y: auto;
+    outline: 2px solid #000; /* Чёрная рамка */
+    border-left: 10px; /* Отступ справа */
+    border-right: 10px;
+    width: 100%;
+}
+
+.article_text {
+    font-size: 14pt;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+aside {
+    height: 300px;
+    width: 200px;
+    float: right;
+    margin: 7px 10px 7px 30px; /* Отступы вокруг картинки */
+    border: 3px solid #fff; /* Белая рамка */
+}
+
+aside > img {
+    float: left; /* Обтекание картинки по левому краю */
+    width: 100%
+}
+
+/*//////////////////Article block css//////////////////////*/
+
+
+/*//////////////////Select list block css//////////////////////*/
+.select_list_block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 0;
+    min-width: 0;
+}
+
+.select_list_block > button {
+    margin: 10px;
+    align-self: flex-end;
+}
+
+#template_list_element {
+    display: none;
+}
+
+.select_page_button {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+#articles_list {
+    overflow-y: auto;
+}

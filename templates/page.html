@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="grid_wrapper">
+    <div class="select_list_block frame">
+        <div id="articles_list">
+            <div id="template_list_element">
+                <div class="select_page_button" data-article-id="">Text</div>
+                <div class="article_block" style="display: none">
+                    <div class="article frame">
+                        <aside>
+                            <img class="article_image" src="" alt="Иллюстрация">
+                        </aside>
+                        <div class="article_text"></div>
+                    </div>
+                    <button type="submit" class="control_button delete_article_button">Удалить</button>
+                </div>
+            </div>
+        </div>
+        <button id="add_article_button" class="control_button">Добавить</button>
+    </div>
+
+    <div id="sidebar_article_form" class="frame" style="display: none"></div>
+
+    <div id="input_article_form" class="frame myForm">
+        <label for="article_header">Заголовок</label>
+        <input id="article_header" type="text">
+        <label for="article_image_link">Ссылка на картинку</label>
+        <input id="article_image_link" type="text">
+        <label for="input_article_text">Текст</label>
+        <textarea id="input_article_text"></textarea>
+        <button id="save_article_button" class="control_button">Сохранить</button>
+    </div>
+</div>
+
+<script src="../static/js/http_methods.js"></script>
+</body>
+</html>
