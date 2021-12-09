@@ -10,6 +10,7 @@ body, html, main {
 }
 
 body {
+    /*Не стащил, а реквизировал (морской термин) http://www.brandgradients.com/paypal-colors/*/
     background: linear-gradient(-120deg, #003087, #009cde, #012169);
 }
 

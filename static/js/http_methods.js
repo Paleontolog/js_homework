@@ -218,48 +218,7 @@ async function updateListOfArticles() {
             .querySelectorAll('.select_page_button')
             .forEach(it => it.addEventListener('click', clickListElement));
 
-        // await showHighlightedArticle(htmlList, currentHighlighted);
     } else {
         showArticleFormBlock();
     }
 }
-
-
-//
-
-//
-
-//
-
-//
-
-//
-// async function clickListElement(event) {
-//     let clickedElement = event.target;
-//     if (clickedElement.classList.contains('select_page_button')) {
-//         highlightArticle(clickedElement);
-//         hideArticles();
-//         await showArticle(clickedElement);
-//     }
-// }
-//
-
-//
-
-// async function showHighlightedArticle(htmlList, highlightedArticle) {
-//     let article;
-//
-//     if (highlightedArticle) {
-//         let id = highlightedArticle.getAttribute('data-article-id');
-//         article = htmlList.querySelector(`[data-article-id='${id}']`);
-//     }
-//
-//     if (!article) {
-//         article = htmlList
-//             .querySelector('li:not([class*=\'template_list_element\']) div');
-//     }
-//
-//     highlightArticle(article);
-//
-//     await showArticle(article)
-// }
